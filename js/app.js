@@ -28,7 +28,9 @@ angular.module('starter', ['ionic'])
   var breathOutTimer;
   var resetTimer;
   
-  //var pitchPop = new Audio("pitch-up-down.wav")
+  var pitchPop = new Audio("pitch-up-down.wav");
+  pitchPop.play();
+  pitchPop.pause();
   $scope.backgroundAnimation = "stressed-background";
   
   $scope.reset = function(){
@@ -44,7 +46,7 @@ angular.module('starter', ['ionic'])
     holdTimer = setTimeout(function(){$scope.message = "hold";$scope.$apply();}, (animationDuration/2)-(holdDuration));
     breathOutTimer = setTimeout(function(){$scope.message = "breath out";$scope.$apply();}, (animationDuration/2));
     resetTimer = setTimeout(function(){$scope.reset();$scope.$apply();}, animationDuration);
-    //pitchPop.play();
+    pitchPop.play();
   }
   
   $scope.onRelease = function(){
@@ -59,8 +61,8 @@ angular.module('starter', ['ionic'])
     clearTimeout(resetTimer);
     $scope.backgroundAnimation = "darken-background";
     setTimeout(function(){$scope.backgroundAnimation = "stressed-background";$scope.$apply();}, darkenDuration);
-    //pitchPop.pause();
-    //pitchPop.currentTime = 0;
+    pitchPop.pause();
+    pitchPop.currentTime = 0;
   }
   
   $scope.onInfo = function(){
