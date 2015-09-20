@@ -68,7 +68,7 @@ angular.module('starter', ['ionic'])
       title: "About",
       template: "<p>This device you are holding is a stress multiplexer.</p>\
                 <p>Take a dose of nostress by holding the <b>hold me</b> button and following the prompts.</p>\
-                <p>Recommended dosage: One nostress, every eight hours.</p>",
+                <p>Recommended dosage: Three nostress, every eight hours.</p>",
       okType: "button-royal"
     })
   }
