@@ -30,10 +30,15 @@
       </ion-header-bar>
       <ion-content ng-class="backgroundAnimation">
         
-        <button class="button button-large button-royal stress-button" ng-class="animation" on-touch="onTouch()" on-release="onRelease()">
+        <!--<div class="card message"><h1 class="title royal">{{message}}</h1></div>-->
+        <!--<button class="button button-large button-royal stress-button" ng-class="animation" on-touch="onTouch()" on-release="onRelease()">
           hold me
-        </button>
+        </button>-->
       </ion-content>
+          <div class="bar bar-footer bar-royal hold-me" ng-class="animation" on-touch="onTouch()" on-release="onRelease()">
+            <div class="title">hold me</div>
+          </div>
     </ion-pane>
+
   </body>
 </html>
